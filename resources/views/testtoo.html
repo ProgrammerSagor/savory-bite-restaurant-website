@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Savory Bite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e11d48',
+                        'primary-dark': '#be123c',
+                        secondary: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .tab-active {
+            border-bottom: 3px solid #e11d48;
+            color: #e11d48;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $(".tab-btn").removeClass("tab-active");
+            $(".tab-btn").first().addClass("tab-active");
+
+            $(".section").hide();
+            $(".section").first().show();
+
+            $(".tab-btn").click(function () {
+
+                $(".tab-btn").removeClass("tab-active");
+                $(this).addClass("tab-active");
+
+                let target = $(this).data("target");
+                $(".section").hide();
+                $(target).show();
+            });
+        });
+
+    </script>
+</body>
+
+</html>
